@@ -38,7 +38,7 @@ if (require.main === module) {
 var getFromActive = function (location) {
     var emitter = new events.EventEmitter();
     //console.log("inside getFromActive function");
-    unirest.get("http://api.amp.active.com/v2/search?query=hiking&sort=date_asc&per_page=24&near=" + location + ",US&radius=100&api_key=2e4ra5w6b9augfrn54vjb4bx")
+    unirest.get("http://api.amp.active.com/v2/search?query=hiking&sort=date_asc&per_page=24&near=" + location + ",US&radius=100&api_key=w553zbm5zvemxhkn22nfzhhc")
         .header("Accept", "application/json")
         .end(function (result) {
             //console.log(result.status, result.headers, result.body);
