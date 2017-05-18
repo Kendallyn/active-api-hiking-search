@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Active Hiking Search</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
     <section class="box">
-        <h1>Find your next hiking trail</h1>
-        <p>Looking for your next outdoor adventure?</p>
-        <p>Search for a location to find a hiking trail!</p>
+        <h1>Trail Finder</h1>
+        <img src="img/power-by--drk.png" id="activeIcon" alt="Active logo">
+        <h3>Looking for your next outdoor adventure?</h3>
+        <h3>Search for a location to find a hiking trail!</h3>
         <form id="searchForm">
             <input type='text' name='search' id='searchField' placeholder="Enter city and state here" value="">
-            <div id="searchButton">
-                <button type='submit' name='submit' id="submitButton">Submit</button>
+            <div id="button">
+                <button type='submit' name='submit' id="searchButton">Search</button>
             </div>
             <div id="searchResults">
                 <ul>
@@ -54,7 +57,9 @@
             </div>
         </form>
     </section>
-    <section class="favorites">
+    <section class="pinnedFavorites">
+        <img src="img/hikingbutton.jpg">
+        <h3>Pinned Hiking Trails</h3>
         <p>A saved hike will go here after the user adds it from the list of hiking trail results</p>
         <p>A saved hike will go here after the user adds it from the list of hiking trail results</p>
         <p>A saved hike will go here after the user adds it from the list of hiking trail results</p>
