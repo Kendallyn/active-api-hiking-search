@@ -212,13 +212,15 @@ footer ul li a .fa-envelope {
 @media only screen and (max-width: 1000px) {
     .box #searchForm {
         text-align: center;
+    }
+    .box #searchForm #searchButton {
         display: block;
     }
-    .box #searchForm #searchField,
+    /*.box #searchForm #searchField,
     .box #searchForm #searchButton {
         display: block;
         text-align: center;
-    }
+    }*/
     .box #searchForm #searchField {
         width: 40%;
     }
