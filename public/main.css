@@ -120,6 +120,7 @@ button:focus {
     color: darkgreen;
     font-family: 'Abel', sans-serif;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .box #searchResults li img {
