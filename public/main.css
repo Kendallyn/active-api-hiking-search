@@ -19,6 +19,20 @@ html {
     padding-bottom: 5rem;
 }
 
+input::placeholder {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+    background-color: transparent;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 .box h1 {
     font-size: 50px;
     color: white;
@@ -33,30 +47,23 @@ html {
     text-shadow: 2px 2px 4px #000000;
 }
 
-#activeIcon {
+.box #activeIcon {
     position: relative;
     left: 1.5rem;
 }
 
-.box p {
+.box h3 {
     font-family: 'Abel', sans-serif;
     font-size: 20px;
     text-shadow: 2px 2px 4px #000000;
 }
 
-.box h2 {
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    font-family: 'Abel', sans-serif;
-    font-size: 30px;
+.box #searchForm {
+    text-align: center;
 }
 
-#searchField,
-#button {
+.box #searchForm #searchField {
     display: inline-block;
-}
-
-#searchField {
     border: 1px solid white;
     width: 20%;
     font-size: 1.25em;
@@ -69,7 +76,7 @@ html {
     font-weight: bold;
 }
 
-#searchButton {
+.box #searchForm #searchButton {
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
     background-color: transparent;
@@ -77,20 +84,6 @@ html {
     border: 1px solid white;
     font-size: 1em;
     padding: 3px 2px;
-}
-
-input::placeholder {
-    text-align: center;
-    color: white;
-    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
-    background-color: transparent;
-}
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
 }
 
 .box #searchResults ul {
@@ -107,25 +100,44 @@ button:focus {
     vertical-align: top;
 }
 
-.box #searchResults li img {
-    display: block;
-    width: 100%;
-    border-radius: 5px;
+.box #searchResults h2 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Abel', sans-serif;
+    font-size: 30px;
 }
 
 .box #searchResults p {
     color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Abel', sans-serif;
+}
+
+.box #searchResults li img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: rgba(192, 192, 192, .75);
+    margin-top: 1rem;
 }
 
 .pinnedFavorites {
     width: 100%;
-    border: 2px solid white;
+    border-top: 2px solid white;
+    text-align: center;
+}
+
+.pinnedTitle {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .pinnedFavorites img {
     width: 75px;
     height: 75px;
     display: inline-block;
+    vertical-align: middle;
 }
 
 .pinnedFavorites h3 {
@@ -134,16 +146,27 @@ button:focus {
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
     font-family: 'Abel', sans-serif;
+    vertical-align: middle;
+}
+
+pinnedFavorites .savedHikes {
+    display: inline-block;
+    text-align: center;
 }
 
 .pinnedFavorites p {
-    width: 30%;
+    width: 23%;
     display: inline-block;
-    height: 40%;
     margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
     text-align: center;
     border: 1px solid white;
     color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border-radius: 5px;
 }
 
 footer {
@@ -187,11 +210,33 @@ footer ul li a .fa-envelope {
 }
 
 @media only screen and (max-width: 1000px) {
-    .box #searchResults li,
+    .box #searchForm {
+        text-align: center;
+        display: block;
+    }
+    .box #searchForm #searchField,
+    .box #searchForm #searchButton {
+        display: block;
+        text-align: center;
+    }
+    .box #searchForm #searchField {
+        width: 40%;
+    }
+    .box #searchResults li {
+        display: block;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .pinnedFavorites {
         display: block;
         width: 75%;
         margin-left: auto;
         margin-right: auto;
+    }
+    .pinnedFavorites .savedHikes p {
+        display: block;
+        text-align: center;
+        width: 100%;
     }
 }
