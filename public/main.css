@@ -5,9 +5,8 @@
     box-sizing: border-box;
 }
 
-html {
-    background: rgba(128, 128, 128, 0.7) url("img/mistytrees.jpeg") no-repeat top center fixed;
-    background-size: 100% 100%;
+body {
+    background-color: #DDD;
 }
 
 .box {
@@ -16,7 +15,29 @@ html {
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
+}
+
+.box .nav {
+    background-image: url(img/tree-dark.jpg);
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+.box .nav h2 {
+    color: white;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #000000;
+    padding-top: 1rem;
+}
+
+.box .nav #topHikingButton {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 input::placeholder {
@@ -47,23 +68,11 @@ button:focus {
     text-shadow: 2px 2px 4px #000000;
 }
 
-.box #activeIcon {
-    position: relative;
-    left: 1.5rem;
-}
-
-.box h3 {
-    font-family: 'Abel', sans-serif;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px #000000;
-}
-
 .box #searchForm {
     text-align: center;
 }
 
 .box #searchForm #searchField {
-    display: inline-block;
     border: 1px solid white;
     width: 20%;
     font-size: 1.25em;
@@ -108,9 +117,9 @@ button:focus {
 }
 
 .box #searchResults p {
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
+    color: darkgreen;
     font-family: 'Abel', sans-serif;
+    font-size: 20px;
 }
 
 .box #searchResults li img {
@@ -120,6 +129,15 @@ button:focus {
     border: 2px solid white;
     background-color: rgba(192, 192, 192, .75);
     margin-top: 1rem;
+}
+
+.box #searchResults .save .addToFavs {
+    height: 40px;
+    width: 40px;
+    float: left;
+    position: relative;
+    top: 20px;
+    right: 10px;
 }
 
 .pinnedFavorites {
@@ -149,9 +167,17 @@ button:focus {
     vertical-align: middle;
 }
 
-pinnedFavorites .savedHikes {
+.pinnedFavorites .savedHikes {
     display: inline-block;
     text-align: center;
+}
+
+.pinnedFavorites .savedHikes .delete {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    left: 28px;
+    top: -46px;
 }
 
 .pinnedFavorites p {
@@ -170,17 +196,18 @@ pinnedFavorites .savedHikes {
 }
 
 footer {
-    width: 70%;
+    width: 100%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 3rem;
     padding-top: 0rem;
     font-family: cursive;
+    background-image: url(img/tree-dark.jpg);
 }
 
 footer p {
-    margin-top: 1rem;
+    padding-top: 3rem;
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
 }
@@ -213,7 +240,7 @@ footer ul li a .fa-envelope {
     .box #searchForm {
         text-align: center;
     }
-    .box #searchForm #searchButton {
+    .box #searchForm {
         display: block;
     }
     /*.box #searchForm #searchField,
