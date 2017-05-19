@@ -53,13 +53,14 @@ button:focus {
     outline: none;
 }
 
-.box #searchForm {
+.box .nav #searchForm {
     text-align: center;
+    display: block;
 }
 
-.box #searchForm #searchField {
+.box .nav #searchForm #searchField {
     border: 1px solid white;
-    width: 20%;
+    width: 40%;
     font-size: 1.25em;
     border-radius: 5px;
     background: transparent;
@@ -70,7 +71,7 @@ button:focus {
     font-weight: bold;
 }
 
-.box #searchForm #searchButton {
+.box .nav #searchForm #searchButton {
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
     background-color: transparent;
@@ -161,6 +162,10 @@ button:focus {
     vertical-align: middle;
 }
 
+.pinnedFavorites ul {
+    list-style-type: none;
+}
+
 .pinnedFavorites .pinnedTitle h3 {
     font-size: 1.5em;
     display: inline-block;
@@ -176,12 +181,12 @@ button:focus {
     text-align: center;
 }
 
-.pinnedFavorites .savedHikes .delete {
+.pinnedFavorites .savedHikes li .fa-minus-circle {
     height: 25px;
     width: 25px;
     position: relative;
     left: 28px;
-    top: -46px;
+    top: -53px;
 }
 
 .pinnedFavorites .savedHikes p {
@@ -240,10 +245,8 @@ footer ul li a .fa-envelope {
 }
 
 @media only screen and (max-width: 1000px) {
-    .box #searchForm {
+    .box .nav #searchForm {
         text-align: center;
-    }
-    .box #searchForm {
         display: block;
     }
     /*.box #searchForm #searchField,
@@ -252,7 +255,7 @@ footer ul li a .fa-envelope {
         text-align: center;
     }*/
     .box #searchForm #searchField {
-        width: 40%;
+        width: 30%;
     }
     .box #searchResults li {
         display: block;
