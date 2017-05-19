@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -51,13 +52,7 @@ button:focus {
     outline: none;
 }
 
-
-/*.box .nav #searchForm {
-    text-align: center;
-    display: block;
-}*/
-
-.box .nav #searchForm #searchField {
+.box .nav #searchField {
     border: 1px solid white;
     width: 40%;
     font-size: 1.25em;
@@ -70,7 +65,7 @@ button:focus {
     font-weight: bold;
 }
 
-.box .nav #searchForm #searchButton {
+.box .nav #searchButton {
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
     background-color: transparent;
@@ -122,7 +117,6 @@ button:focus {
     font-family: 'Abel', sans-serif;
     font-size: 20px;
     font-weight: bolder;
-    text-shadow: 2px 2px 0px #FFF;
 }
 
 .box #searchResults li img {
@@ -180,15 +174,28 @@ button:focus {
     text-align: center;
 }
 
-.pinnedFavorites .savedHikes li .fa-minus-circle {
-    height: 25px;
-    width: 25px;
-    position: relative;
-    left: 28px;
-    top: -53px;
+.pinnedFavorites .savedHikes .pinned {
+    border: 1px solid white;
+    display: inline-block;
+    text-align: center;
+    width: 23%;
+    border-radius: 5px;
+    margin: 1%;
 }
 
-.pinnedFavorites .savedHikes p {
+.pinnedFavorites .savedHikes .pinned .fa-minus-circle {
+    position: relative;
+    float: left;
+    left: -6px;
+    top: -10px;
+}
+
+.pinnedFavorites .savedHikes .pinned p {
+    padding: .5rem;
+}
+
+
+/*.pinnedFavorites .savedHikes .pinned p {
     width: 23%;
     display: inline-block;
     margin-top: 1%;
@@ -200,7 +207,7 @@ button:focus {
     color: black;
     padding: .5rem;
     border-radius: 5px;
-}
+}*/
 
 footer {
     width: 100%;
@@ -264,14 +271,13 @@ footer ul li a .fa-envelope {
         margin-left: auto;
         margin-right: auto;
     }
+    .pinnedFavorites .savedHikes ul {
+        display: block;
+    }
     .pinnedFavorites .savedHikes li .fa-minus-circle {
         float: left;
         position: relative;
         top: -7px;
         left: -6px;
-    }
-    .pinnedFavorites .savedHikes p {
-        display: block;
-        width: 100%;
     }
 }
