@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -10,7 +9,6 @@ body {
 }
 
 .box {
-    width: 100%;
     text-align: center;
     margin-top: 0;
     margin-left: auto;
@@ -53,10 +51,11 @@ button:focus {
     outline: none;
 }
 
-.box .nav #searchForm {
+
+/*.box .nav #searchForm {
     text-align: center;
     display: block;
-}
+}*/
 
 .box .nav #searchForm #searchField {
     border: 1px solid white;
@@ -245,10 +244,6 @@ footer ul li a .fa-envelope {
 }
 
 @media only screen and (max-width: 1000px) {
-    .box .nav #searchForm {
-        text-align: center;
-        display: block;
-    }
     /*.box #searchForm #searchField,
     .box #searchForm #searchButton {
         display: block;
@@ -269,9 +264,14 @@ footer ul li a .fa-envelope {
         margin-left: auto;
         margin-right: auto;
     }
+    .pinnedFavorites .savedHikes li .fa-minus-circle {
+        float: left;
+        position: relative;
+        top: -7px;
+        left: -6px;
+    }
     .pinnedFavorites .savedHikes p {
         display: block;
-        text-align: center;
         width: 100%;
     }
 }
