@@ -10,19 +10,21 @@ $("#search").submit(function (event) {
 });
 
 //Results of search get returned from API
-/*function getSearchResults(userSearch) {
+function getSearchResults(userSearch) {
     $.getJSON("http://api.amp.active.com/v2/search", {
-            key: w553zbm5zvemxhkn22nfzhhc,
-            url: "/activity/:location",
-        }
-    }
-*/
+        key: w553zbm5zvemxhkn22nfzhhc,
+        url: "/activity/:location",
+    });
+}
+
 
 //Display the results in HTML
 function displayResults(hikingArray) {
     var createHtmlList = "";
     $.each(hikingArray, function (hikingArrayKey, hikingArrayValue) {
-            createHtmlList += "<li>";
+        createHtmlList += "<li>";
+        createHtmlList +=
             createHtmlList +=
-        }
-    }
+            createHtmlList += "</li>";
+    });
+}
