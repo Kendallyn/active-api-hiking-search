@@ -9,6 +9,10 @@ body {
     background-color: #DDD;
 }
 
+button {
+    background-color: transparent;
+}
+
 .box {
     text-align: center;
     margin-top: 0;
@@ -103,6 +107,7 @@ button:focus {
     margin-right: 1%;
     padding: 1rem;
     vertical-align: top;
+    position: relative;
 }
 
 .box #searchResults li h2 {
@@ -128,13 +133,17 @@ button:focus {
     margin-top: 1rem;
 }
 
-.box #searchResults li .addToFavs {
+.box #searchResults li .addToFavorites {
     height: 40px;
     width: 40px;
     float: left;
-    position: relative;
+    position: absolute;
     top: 20px;
     right: 10px;
+}
+
+.box #searchResults li .addToFavorites .addToFavs {
+    width: 100%;
 }
 
 .pinnedFavorites {
@@ -181,13 +190,18 @@ button:focus {
     width: 23%;
     border-radius: 5px;
     margin: 1%;
+    position: relative;
 }
 
-.pinnedFavorites .savedHikes .pinned .fa-minus-circle {
-    position: relative;
+.pinnedFavorites .savedHikes .pinned .delete-favorites-container {
+    position: absolute;
     float: left;
-    left: -6px;
+    left: -8px;
     top: -10px;
+}
+
+.pinnedFavorites .savedHikes .pinned .delete-favorites-container .deleteFavoriteButton {
+    font-size: 20px;
 }
 
 .pinnedFavorites .savedHikes .pinned p {
@@ -256,14 +270,22 @@ footer ul li a .fa-envelope {
         display: block;
         text-align: center;
     }*/
-    .box #searchForm #searchField {
-        width: 30%;
+    .box .nav #searchField,
+    .box .nav #searchButton {
+        width: 40%;
+        margin: 1rem auto;
+        display: block;
     }
     .box #searchResults li {
         display: block;
         width: 75%;
         margin-left: auto;
         margin-right: auto;
+    }
+    .pinnedFavorites .savedHikes .pinned {
+        display: block;
+        width: 95%;
+        margin: 1rem auto;
     }
     .pinnedFavorites {
         display: block;
@@ -274,10 +296,10 @@ footer ul li a .fa-envelope {
     .pinnedFavorites .savedHikes ul {
         display: block;
     }
-    .pinnedFavorites .savedHikes li .fa-minus-circle {
-        float: left;
-        position: relative;
-        top: -7px;
-        left: -6px;
+    .pinnedFavorites .savedHikes li {
+        display: block;
+    }
+    .pinnedFavorites .savedHikes .pinned p {
+        display: block;
     }
 }
