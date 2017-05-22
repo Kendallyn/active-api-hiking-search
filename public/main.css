@@ -67,6 +67,7 @@ button:focus {
     padding: 2px 1px;
     font-family: 'Abel', sans-serif;
     font-weight: bold;
+    text-align: center;
 }
 
 .box .nav #searchButton {
