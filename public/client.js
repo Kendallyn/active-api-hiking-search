@@ -19,7 +19,7 @@ function getSearchResults(userEntry) {
 }
 
 
-//Display the results in HTML
+//Display the results in HTML (GET)
 function getHikingResults(userSearch) {
     //??how to test API by consolelog to get key/values
     $.ajax({
@@ -40,9 +40,12 @@ function getHikingResults(userSearch) {
         });
     }
 
-    //Add a result to favorite section
+    //Add a result to favorite section (POST)
 
 
 
 
-    //Delete a result from favorite section
+    //Delete a result from favorite section (DELETE)
+
+
+    //?Don't have a POST for CRUD project requirements?
