@@ -109,9 +109,21 @@ button:focus {
     padding: 1rem;
     vertical-align: top;
     position: relative;
+    border-top: 3px solid white;
 }
 
-.box #searchResults li h2 {
+.box #searchResults li .auto-populated-description {
+    height: 118px;
+    overflow-x: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: fantasy;
+    font-size: 120%;
+    color: slategray;
+    text-align: justify;
+}
+
+.box #searchResults li h2 a {
     color: black;
     text-shadow: 2px 2px 0px #FFF;
     font-family: 'Abel', sans-serif;
@@ -139,8 +151,8 @@ button:focus {
     width: 40px;
     float: left;
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: -8px;
+    left: -8px;
 }
 
 .box #searchResults li .addToFavorites .addToFavs {
