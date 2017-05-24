@@ -117,15 +117,15 @@ button:focus {
     overflow-x: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-family: fantasy;
-    font-size: 120%;
-    color: slategray;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 130%;
+    color: dimgray;
     text-align: justify;
 }
 
 .box #searchResults li h2 a {
     color: black;
-    text-shadow: 2px 2px 0px #FFF;
+    text-shadow: 2px 2px 0px #A9A9A9;
     font-family: 'Abel', sans-serif;
     font-size: 30px;
 }
