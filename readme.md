@@ -44,7 +44,7 @@ Included:
 * Node.js
 * mLab
 * Heroku
-This app uses AJAX JSON calls to the *Active.com* API to return user search results. It has been designed to be responsive on desktop as well as mobile devices of all screen sizes.
+- This app uses AJAX JSON calls to the *Active.com* API to return user search results. It has been designed to be responsive on desktop as well as mobile devices of all screen sizes.
 
 ## Development Roadmap
 
