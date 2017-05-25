@@ -172,6 +172,7 @@ $(function () {
 });
 
 // add activity to favorites section
+//currently clicking does not add favorite and removes results section
 $(document).on('click', '.searchResults .addToFavoritesButton', function (event) {
 
 
