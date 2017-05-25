@@ -64,7 +64,7 @@ function displayActiveSearchData(dataMatches) {
             buildTheHtmlOutput += '<p>' + dataMatchesValue.assetAttributes[0].attribute.attributeValue + '</p>';
         }
 
-        buildTheHtmlOutput += '<p>' + dataMatchesValue.place.cityName + '</p>';
+        buildTheHtmlOutput += '<p>' + dataMatchesValue.place.cityName + ', ' + dataMatchesValue.place.stateProvinceCode + '</p>';
 
         buildTheHtmlOutput += '<p>' + new Date(utcDate) + '</p>';
 
@@ -79,13 +79,12 @@ function displayActiveSearchData(dataMatches) {
         buildTheHtmlOutput += '<form class="addToFavorites">';
         buildTheHtmlOutput += "<input type='hidden' class='addToFavoritesValue' value='" + dataMatchesValue.assetName + "'>";
         buildTheHtmlOutput += "<input type='hidden' class='addToFavoritesDateValue' value='" + new Date(utcDate) + "'>";
-        buildTheHtmlOutput += "<input type='hidden' class='addToFavoritesPlaceValue' value='" + dataMatchesValue.place.cityName + "'>";
+        buildTheHtmlOutput += "<input type='hidden' class='addToFavoritesPlaceValue' value='" + dataMatchesValue.place.cityName + ", " + dataMatchesValue.place.stateProvinceCode + "'>";
         buildTheHtmlOutput += "<input type='hidden' class='addToFavoritesUrlValue' value='" + dataMatchesValue.registrationUrlAdr + "'>";
         buildTheHtmlOutput += '<button type="submit" class="addToFavoritesButton">';
         buildTheHtmlOutput += '<input type="image" src="img/hikingbutton-transparency.png" alt="Submit" class="addToFavs">';
         buildTheHtmlOutput += '</button>';
         buildTheHtmlOutput += '</form>';
-
         buildTheHtmlOutput += '</li>';
     });
 
@@ -97,66 +96,39 @@ function displayActiveSearchData(dataMatches) {
 //populate favorites container
 function populateFavoritesContainer() {
 
-
     $.ajax({
             type: "GET",
             url: "/populate-favorites/",
             dataType: 'json',
         })
         .done(function (dataOutput) {
-            // console.log(dataOutput);
+            console.log(dataOutput);
             //If successful, set some globals instead of using result object
+            if (dataOutput.length != 0) {
+                var buildTheHtmlOutput = '<div class="pinnedTitle"> <img src="img/hikingbutton-transparency.png"> <h3>Pinned Hiking Trails</h3>  </div>';
+                $.each(dataOutput, function (dataOutputKey, dataOutputValue) {
+                    buildTheHtmlOutput += "<li class = 'pinned'>";
+                    buildTheHtmlOutput += "<div class = 'delete-favorites-container' > ";
+                    buildTheHtmlOutput += "<form class = 'deleteFavoriteValue' > ";
+                    buildTheHtmlOutput += "<input type='hidden' class='deleteFavoriteValueInput' value='" + dataOutputValue._id + "'>";
+                    buildTheHtmlOutput += "<button type = 'submit' class = 'deleteFavoriteButton'>";
+                    buildTheHtmlOutput += "<i class = 'fa fa-minus-circle' aria - hidden = 'true'></i>";
+                    buildTheHtmlOutput += "</button>";
+                    buildTheHtmlOutput += "</form>";
+                    buildTheHtmlOutput += "</div>";
+                    buildTheHtmlOutput += '<h4><a target="_blank" href="' + dataOutputValue.url + '" >' + dataOutputValue.name + '</a></h4>';
+                    var showCity = dataOutputValue.place;
+                    if (showCity === undefined) {
+                        buildTheHtmlOutput += "";
+                    } else {
+                        buildTheHtmlOutput += '<p>' + dataOutputValue.place + '</p>';
+                    }
+                    buildTheHtmlOutput += '<p>' + dataOutputValue.date + '</p>';
+                    buildTheHtmlOutput += "</li>";
+                });
 
-            var buildTheHtmlOutput = "";
-
-            $.each(dataOutput, function (dataOutputKey, dataOutputValue) {
-
-                buildTheHtmlOutput += "<li class = 'pinned'>";
-                buildTheHtmlOutput += "<div class = 'delete-favorites-container' > ";
-                buildTheHtmlOutput += "<form class = 'deleteFavoriteValue' > ";
-                buildTheHtmlOutput += "<input type='hidden' class='deleteFavoriteValueInput' value='" + dataOutputValue._id + "'>";
-                buildTheHtmlOutput += "< button type = 'submit' class = 'deleteFavoriteButton'>";
-                buildTheHtmlOutput += "< i class = 'fa fa-minus-circle' aria - hidden = 'true'></i>";
-                buildTheHtmlOutput += '<h4><a target="_blank" href="' + dataOutputValue.url + '" >' + dataOutputValue.name + '</a></h4>';
-                var showCity = dataOutputValue.place;
-                if (showCity === undefined) {
-                    buildTheHtmlOutput += "";
-                } else {
-                    buildTheHtmlOutput += '<p>' + dataOutputValue.place + '</p>';
-                }
-                buildTheHtmlOutput += '<p>' + dataOutputValue.date + '</p>';
-                buildTheHtmlOutput += "</button>";
-                buildTheHtmlOutput += "</form>";
-                buildTheHtmlOutput += "</div>";
-
-                buildTheHtmlOutput += "</li>";
-            });
-
-
-
-            /*
-                                buildTheHtmlOutput += "<li class='favorites'>";
-                                buildTheHtmlOutput += "<div class='deleteFavorite'>";
-                                buildTheHtmlOutput += "<form class='deleteFavoriteValue'>";
-                                buildTheHtmlOutput += "<input type='hidden' class='deleteFavoriteValueInput' value='" + dataOutputValue._id + "'>";
-                                buildTheHtmlOutput += "<button type='submit' class='deleteFavoriteButton'>";
-                                buildTheHtmlOutput += "<img src='/img/delete.png' class='delete-favorite-icon'>";
-                                buildTheHtmlOutput += "</button>";
-                                buildTheHtmlOutput += "</form>";
-                                buildTheHtmlOutput += "</div>";
-
-                buildTheHtmlOutput += '<h4><a target="_blank" href="' + dataOutputValue.url + '" >' + dataOutputValue.name + '</a></h4>';
-                var showCity = dataOutputValue.place;
-                if (showCity === undefined) {
-                    buildTheHtmlOutput += "";
-                } else {
-                    buildTheHtmlOutput += '<p>' + dataOutputValue.place + '</p>';
-                }
-                buildTheHtmlOutput += '<p>' + dataOutputValue.date + '</p>';
-                buildTheHtmlOutput += "</li>";
-                // console.log(dataOutput);
-            });*/
-            $(".savedHikes").html(buildTheHtmlOutput);
+                $(".savedHikes").html(buildTheHtmlOutput);
+            }
         })
         .fail(function (jqXHR, error, errorThrown) {
             console.log(jqXHR);
@@ -172,11 +144,7 @@ $(function () {
 });
 
 // add activity to favorites section
-//currently clicking does not add favorite and removes results section
-$(document).on('click', '.searchResults .addToFavoritesButton', function (event) {
-
-
-    //if the page refreshes when you submit the form use "preventDefault()" to force JavaScript to handle the form submission
+$(document).on('click', '#searchResults .addToFavoritesButton', function (event) {
     event.preventDefault();
 
     //get the value from the input box
@@ -215,7 +183,6 @@ $(document).on('click', '.searchResults .addToFavoritesButton', function (event)
 //Delete a result from favorite section (DELETE)
 
 $(document).on('click', '.deleteFavoriteButton', function (event) {
-    //if the page refreshes when you submit the form use "preventDefault()" to force JavaScript to handle the form submission
     event.preventDefault();
     //get the value from the input box
     var favoritesIdToDelete = $(this).parent().find('.deleteFavoriteValueInput').val();
@@ -238,6 +205,3 @@ $(document).on('click', '.deleteFavoriteButton', function (event) {
             console.log(errorThrown);
         });
 });
-
-
-//?Don't have an update for CRUD
