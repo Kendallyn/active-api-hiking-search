@@ -20,15 +20,15 @@ This app gives hikers and outdoor enthusiasts access to search for hiking events
 
 The initial mobile and desktop wireframes can be seen below:
 
-![Initial Wireframes](https://github.com/Kendallyn/active-api-hiking-search/blob/master/github-readme-img/wireframe.JPG)
+![Initial Wireframes](https://github.com/Kendallyn/active-api-hiking-search/blob/master/github-readme-img/wireframe.jpg)
 
 ## Working Prototype
 
 You can access a working prototype of the app here: https://active-api-hiking-search.herokuapp.com/
 
 ## Functionality
-The app's functionality includes:
 
+Included:
 * Search for hikes within a 50 mile radius from a US city
 * Return 24 results
 * Results provide the hiking event, location, date, and a description (if provided from API)
