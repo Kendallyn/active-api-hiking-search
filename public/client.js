@@ -41,7 +41,7 @@ function getSearchResults(location) {
 function displayActiveSearchData(dataMatches) {
     var buildTheHtmlOutput = "";
     $.each(dataMatches, function (dataMatchesKey, dataMatchesValue) {
-        //create and populate one LI for each of the results ( "+=" means concatenate to the previous one)
+        //create and populate one LI for each of the results
 
         console.log(dataMatchesValue.activityStartDate);
         var utcDate = dataMatchesValue.activityStartDate; // ISO-8601 formatted date returned from server
