@@ -214,7 +214,7 @@ button:focus {
 .pinnedFavorites .savedHikes .pinned .delete-favorites-container {
     position: absolute;
     float: left;
-    left: -8px;
+    left: -12px;
     top: -10px;
 }
 
