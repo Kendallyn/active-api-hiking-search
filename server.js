@@ -54,12 +54,12 @@ var getFromActive = function (location) {
 
     return emitter;
 };
+
 // local API endpoints
 app.get('/activity/:location', function (req, res) {
 
 
-    //    external api function call and response
-
+    //external api function call and response
     var searchReq = getFromActive(req.params.location);
 
     //get the data from the first api call
@@ -73,9 +73,6 @@ app.get('/activity/:location', function (req, res) {
     });
 
 });
-
-
-
 
 app.post('/add-to-favorites/', function (req, res) {
 
@@ -117,7 +114,6 @@ app.delete('/delete-favorites/:favoritesId', function (req, res) {
         res.status(201).json(items);
     });
 });
-
 
 
 exports.app = app;
