@@ -26,7 +26,6 @@ function getSearchResults(location) {
         .done(function (dataOutput) {
             console.log(dataOutput);
             displayActiveSearchData(dataOutput.results);
-            // displayActiveActivityResults(JSON.parse(resultsForJsonParse));
         })
         .fail(function (jqXHR, error, errorThrown) {
             console.log(jqXHR);
@@ -90,7 +89,6 @@ function displayActiveSearchData(dataMatches) {
     //use the HTML output to show it in the index.html
     $("#searchResults ul").html(buildTheHtmlOutput);
 }
-//Add a result to favorite section (POST)
 
 //populate favorites container
 function populateFavoritesContainer() {
