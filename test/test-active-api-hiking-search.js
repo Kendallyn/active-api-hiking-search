@@ -20,8 +20,6 @@ describe('active-api-hiking-search', function () {
                 name: 'Recreational Hike'
             }, {
                 name: 'Outdoor Adventure'
-            }, {
-                name: 'Color Run'
             }, function () {
                 done();
             });
