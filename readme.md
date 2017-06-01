@@ -12,9 +12,9 @@ Node.js Capstone project for [Thinkful.com](www.thinkful.com) using [Active.com]
 
 I wanted to create an app to easily see hiking events or trails. I've always enjoyed discovering new outdoor places that I can bring my camera along for some nature photography.
 
-## Use Case
+## Summary
 
-This app gives hikers and outdoor enthusiasts access to search for hiking events or trails within a 50 mile radius of the city they search for.
+This app gives hikers and outdoor enthusiasts access to search for hiking events or trails within a 50 mile radius of the city they search for. The user is able to see a list of events returned from the search results and can save which events they want to participate in. The user has the ability to remove an event they have saved by deleting it from the favorites section.
 
 ## Initial UX
 
