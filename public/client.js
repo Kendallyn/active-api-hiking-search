@@ -144,7 +144,7 @@ $(function () {
 $(document).on('click', '#searchResults .addToFavoritesButton', function (event) {
     event.preventDefault();
 
-    //get the value from the input box
+    //highlight the icon to show it has been added to favorites
     $(this).toggleClass("highlight");
 
     var favoritesValue = $(this).parent().find('.addToFavoritesValue').val();
