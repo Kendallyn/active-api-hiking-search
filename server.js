@@ -92,7 +92,6 @@ app.post('/add-to-favorites/', function (req, res) {
 
 app.get('/populate-favorites', function (req, res) {
     activity.find(function (err, item) {
-        console.log(item);
         if (err) {
             return res.status(500).json({
                 message: 'Internal Server Error'
