@@ -30,7 +30,7 @@ describe('active-api-hiking-search', function () {
         it('should list activities on GET', function (done) {
             chai.request(app)
                 .get('/activity/:location')
-                .then(function (err, res) {
+                .end(function (err, res) {
                     res.should.have.status(200);
                     res.should.be.json;
                     done();
