@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: pX6OsSHU7yAyaWPkrkFQX6xDhPlk+hvSQdem26IV19QYLR+aDMfeyBvpDZLFJ3hyq75/Pg+gTpCD46RbgkIpk3GGsTeBLp3RxVxmUIcuQFg+N6EOZU5EsBwnZlYmM95F3kj0+lPOQZaY+gbdSgSeXllxZLwym2okBzcLBfqv1tJEFXrRPj3DJ35Dd5ZkE+kHk++wnFp0M+hu5eS7hcF2oyXxxnT1DOOjOBV7DLUQwtTKksX9HJiRlsTliRMdrUeBx2dO5IeP6XanpU6hJ2wQmWXxhfVMOB1X3T79pt/G8J3Qj3UJJdm+p/qnhFDOb1uetomL31vjhlz3pBf0f8FoVVXcLbOq/cyposrL3gWEzZtEWn6ucQ3YRCxIkSwxokYHHPjHe2Z4ZyafjRLexZlaZGiOAHfGjSM3yhZa2csyqY19nlzgE21YPO2wRbc/MZjIg38UUYlIuZUNtwJT73fNTS2PADOROB+CqAnhbBUh/nH9MWuOqPxyW1xrWurcFZZ6GdPbD4cQbVHxfFoDtYX/8SflJaZjg2CWrUr2gHcvB/ptIpQieMZ029Ln0y8J6IC+WNfi4YRcKvC4nbK0yUJyBLHHhlhEVV28JFln8h0j6SKoFsfOSBxZRkKZdeXNMiR1Z36h78rKRdjRU91dpCinNvWo8hlAvfTblpGU8WWccyU=
+  app: active-api-hiking-search
+  on:
+    repo: Kendallyn/active-api-hiking-search
