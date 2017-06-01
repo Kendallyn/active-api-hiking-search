@@ -57,7 +57,7 @@ describe('active-api-hiking-search', function () {
                 });
         });
 
-        is('should delete an item on DELETE', function (done) {
+        it('should delete an item on DELETE', function (done) {
             chai.request(app)
                 .delete('/')
                 .end(function (err, res) {
