@@ -18,7 +18,7 @@ This app gives hikers and outdoor enthusiasts access to search for hiking events
 
 ## Initial UX
 
-The initial mobile and desktop wireframes can be seen below:
+The initial wireframe can be seen below:
 
 ![Initial Wireframes](https://github.com/Kendallyn/active-api-hiking-search/blob/master/github-readme-img/wireframe.jpg)
 
