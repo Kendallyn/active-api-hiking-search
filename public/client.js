@@ -146,7 +146,6 @@ $(document).on('click', '#searchResults .addToFavoritesButton', function (event)
 
     //highlight the icon to show it has been added to favorites
     $(this).toggleClass("highlight");
-
     var favoritesValue = $(this).parent().find('.addToFavoritesValue').val();
     var favoritesDateValue = $(this).parent().find('.addToFavoritesDateValue').val();
     var favoritesPlaceValue = $(this).parent().find('.addToFavoritesPlaceValue').val();
@@ -201,4 +200,9 @@ $(document).on('click', '.deleteFavoriteButton', function (event) {
             console.log(error);
             console.log(errorThrown);
         });
+
+    //if last one, empty the div
+    $(".deleteFavoriteButton").click(function () {
+        $(".savedHikes").empty();
+    });
 });
