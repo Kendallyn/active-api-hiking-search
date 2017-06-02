@@ -24,13 +24,13 @@ function getSearchResults(location) {
             dataType: 'json',
         })
         .done(function (dataOutput) {
-            console.log(dataOutput);
+            //console.log(dataOutput);
             displayActiveSearchData(dataOutput.results);
         })
         .fail(function (jqXHR, error, errorThrown) {
-            console.log(jqXHR);
-            console.log(error);
-            console.log(errorThrown);
+            //console.log(jqXHR);
+            //console.log(error);
+            //console.log(errorThrown);
         });
 }
 
@@ -41,7 +41,7 @@ function displayActiveSearchData(dataMatches) {
     var buildTheHtmlOutput = "";
     $.each(dataMatches, function (dataMatchesKey, dataMatchesValue) {
 
-        console.log(dataMatchesValue.activityStartDate);
+        //console.log(dataMatchesValue.activityStartDate);
         var utcDate = dataMatchesValue.activityStartDate; // ISO-8601 formatted date returned from server
 
         buildTheHtmlOutput += '<li>';
@@ -128,9 +128,9 @@ function populateFavoritesContainer() {
             }
         })
         .fail(function (jqXHR, error, errorThrown) {
-            console.log(jqXHR);
-            console.log(error);
-            console.log(errorThrown);
+            //console.log(jqXHR);
+            //console.log(error);
+            //console.log(errorThrown);
         });
 }
 
@@ -170,9 +170,9 @@ $(document).on('click', '#searchResults .addToFavoritesButton', function (event)
             populateFavoritesContainer();
         })
         .fail(function (jqXHR, error, errorThrown) {
-            console.log(jqXHR);
-            console.log(error);
-            console.log(errorThrown);
+            //console.log(jqXHR);
+            //console.log(error);
+            //console.log(errorThrown);
         });
 });
 
@@ -196,9 +196,9 @@ $(document).on('click', '.deleteFavoriteButton', function (event) {
             populateFavoritesContainer();
         })
         .fail(function (jqXHR, error, errorThrown) {
-            console.log(jqXHR);
-            console.log(error);
-            console.log(errorThrown);
+            //console.log(jqXHR);
+            //console.log(error);
+            //console.log(errorThrown);
         });
 
     //if last one, empty the div
