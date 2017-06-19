@@ -13,27 +13,29 @@ button {
     background-color: transparent;
 }
 
-.box {
+.nav,
+.box,
+#searchResults {
     text-align: center;
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
 }
 
-.box .nav {
+.nav {
     background-image: url(img/tree-dark.jpg);
     padding-top: 25px;
     padding-bottom: 50px;
 }
 
-.box .nav h1 {
+.nav h1 {
     font-size: 50px;
     color: white;
     font-family: 'Montserrat Subrayada', sans-serif;
     text-shadow: 2px 2px 4px #000000;
 }
 
-.box .nav .subtitle {
+.nav .subtitle {
     color: white;
     font-family: 'Abel', sans-serif;
     font-size: 20px;
@@ -55,13 +57,13 @@ button:focus {
     outline: none;
 }
 
-.box .nav #searchField {
+.box #searchField {
     border: 1px solid white;
     width: 40%;
     font-size: 1.25em;
     border-radius: 5px;
     background: transparent;
-    color: white;
+    color: black;
     margin-top: 1rem;
     padding: 2px 1px;
     font-family: 'Abel', sans-serif;
@@ -69,17 +71,17 @@ button:focus {
     text-align: center;
 }
 
-.box .nav #searchButton {
+.box #searchButton {
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
     background-color: transparent;
     border-radius: 5px;
     border: 1px solid white;
     font-size: 1em;
-    padding: 3px 2px;
+    padding: 6px 6px;
 }
 
-.box .nav h2 {
+.box h2 {
     color: white;
     font-family: 'Abel', sans-serif;
     font-size: 20px;
@@ -87,7 +89,7 @@ button:focus {
     padding-top: 1rem;
 }
 
-.box .nav #topHikingButton {
+.box #topHikingButton {
     width: 40px;
     height: 40px;
     vertical-align: middle;
@@ -95,12 +97,12 @@ button:focus {
     margin-right: 5px;
 }
 
-.box #searchResults ul {
+#searchResults ul {
     list-style-type: none;
-    margin-top: 1rem;
+    padding-top: 1rem;
 }
 
-.box #searchResults li {
+#searchResults li {
     width: 40%;
     display: inline-block;
     margin-left: 1%;
@@ -111,36 +113,37 @@ button:focus {
     border-top: 3px solid white;
 }
 
-.box #searchResults li .auto-populated-description {
+#searchResults li .auto-populated-description {
     height: 118px;
     overflow-x: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Abel', sans-serif;
     font-size: 130%;
     color: dimgray;
     text-align: justify;
 }
 
-.box .highlight {
+.highlight {
     background: black;
 }
 
-.box #searchResults li h2 a {
+#searchResults li h2 a {
     color: black;
     text-shadow: 2px 2px 0px #A9A9A9;
     font-family: 'Abel', sans-serif;
     font-size: 30px;
+    text-decoration: none;
 }
 
-.box #searchResults li p {
+#searchResults li p {
     color: black;
     font-family: 'Abel', sans-serif;
     font-size: 20px;
     font-weight: bolder;
 }
 
-.box #searchResults li img {
+#searchResults li img {
     display: block;
     width: 100%;
     border-radius: 5px;
@@ -149,7 +152,7 @@ button:focus {
     margin-top: 1rem;
 }
 
-.box #searchResults li .addToFavorites {
+#searchResults li .addToFavorites {
     height: 40px;
     width: 40px;
     float: left;
@@ -158,7 +161,7 @@ button:focus {
     left: -8px;
 }
 
-.box #searchResults li .addToFavorites .addToFavs {
+#searchResults li .addToFavorites .addToFavs {
     width: 100%;
 }
 
@@ -278,13 +281,13 @@ footer ul li a .fa-envelope {
 }
 
 @media only screen and (max-width: 1000px) {
-    .box .nav #searchField,
-    .box .nav #searchButton {
+    .box #searchField,
+    .box #searchButton {
         width: 40%;
         margin: 1rem auto;
         display: block;
     }
-    .box #searchResults li {
+    #searchResults li {
         display: block;
         width: 75%;
         margin-left: auto;
