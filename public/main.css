@@ -13,6 +13,10 @@ button {
     background-color: transparent;
 }
 
+.wrap {
+    min-height: calc(100vh - 193px);
+}
+
 .nav,
 .box,
 #searchResults {
