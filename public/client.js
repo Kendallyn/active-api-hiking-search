@@ -24,7 +24,7 @@ function getSearchResults(location) {
             dataType: 'json',
         })
         .done(function (dataOutput) {
-            //console.log(dataOutput);
+            console.log(dataOutput);
             displayActiveSearchData(dataOutput.results);
         })
         .fail(function (jqXHR, error, errorThrown) {
