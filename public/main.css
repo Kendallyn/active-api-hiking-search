@@ -5,10 +5,10 @@
     box-sizing: border-box;
 }
 
+
 body {
     background-color: #DDD;
 }
-
 button {
     background-color: transparent;
 }
@@ -24,6 +24,7 @@ button {
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
+    ;
 }
 
 .nav {
@@ -73,7 +74,6 @@ button:focus {
     font-family: 'Abel', sans-serif;
     font-weight: bold;
     text-align: center;
-
 }
 
 .box #searchButton {
