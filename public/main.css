@@ -7,7 +7,8 @@
 
 
 body {
-    background-color: #DDD;
+/*    background-color: #DDD;*/
+    background-color: #ededed;
 }
 button {
     background-color: transparent;
@@ -63,12 +64,11 @@ button:focus {
 }
 
 .box #searchField {
-    border: 1px solid white;
+    border: 1px solid #a8a8a8;
     width: 40%;
     font-size: 1.25em;
     border-radius: 5px;
     background: transparent;
-    color: black;
     margin-top: 1rem;
     padding: 2px 1px;
     font-family: 'Abel', sans-serif;
@@ -81,7 +81,7 @@ button:focus {
     text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
     background-color: transparent;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid #a8a8a8;
     font-size: 1em;
     padding: 6px 6px;
 }
